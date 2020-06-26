@@ -2,28 +2,63 @@
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  
+
   ## Description 
+
   ${data.description}
+
+
 
   ##  Table of Contents 
 
+  [Installation](##Installation)
+
+  [Usage](##Usage)
+
+  [License](##License)
+
+  [Contributing](##Contributing)
+
+  [Tests](##Tests)
+
+  [Questions](##Questions)
+
+
+
   ## Installation
-  ${data.dependencies}
+
+  To install the npm packages and their dependencies, run ${data.dependencies}
+
+
 
   ## Usage
+
   ${data.repo}
 
+
+
   ## License 
+
   ${data.license}
 
+
+
   ## Contributing
+
   ${data.contributions}
 
+
+
   ## Tests
-  ${data.tests}
+
+  Tests can be run using ${data.tests}
+
+
 
   ## Questions
-  ${data.username} ${data.emailAddress}
+  
+  If you have any questions, please contact me at github.com/${data.username} or email me at ${data.emailAddress}.
 `;
 }
 
