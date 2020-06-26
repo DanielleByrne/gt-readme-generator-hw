@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-var markdown = require("./generateMarkdown.js");
+const markdown = require("./generateMarkdown.js");
 
 
 // array of questions for user
@@ -14,7 +14,9 @@ const questions = [
         questionSix: "What command should be run to install dependencies?",
         questionSeven: "What command should be run to run tests?",
         questionEight: "What does the user need to know about using the repo?",
-        questionNine: "What does the user need to know about contributing?"
+        questionNine: "What does the user need to know about contributing?",
+        questionTen: "What is your name?"
+
 
     }
 ];
@@ -24,6 +26,8 @@ function writeToFile(fileName, data) {
     fs.writeFile(fileName, markdown.generateMarkdown(data), function(err){
         if (err){
             return console.log(err)
+        }else{
+            console.log("Generating README")
         }
     });
 }
@@ -63,6 +67,8 @@ function init() {
                 "None"
             ],
             default: "MIT"
+            // badge link https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+            // licences https://www.synopsys.com/blogs/software-security/top-open-source-licenses/
         },
         {
             type: "input",
@@ -86,13 +92,32 @@ function init() {
             name: "contributions",
             message: questions[0].questionNine
         },
+        {
+            type: "input",
+            name: "contributerName",
+            message: questions[0].questionTen
+        },
 
 
     ])
     .then(function(data){
-      writeToFile("README.md",data);
+      writeToFile("SAMPLEREADME.md",data);
     });
 }
 
 // function call to initialize program
 init();
+
+
+// {
+    // message: "Prompt",
+    // type: "list",
+    // name: "license",
+    // // badges added from https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+    // // choices chosen from top 5 of this list: https://www.synopsys.com/blogs/software-security/top-open-source-licenses/
+    // choices: [
+    //   {
+    //     name: "license name",
+    //     value: "badge link",
+    //   },
+    //   ];

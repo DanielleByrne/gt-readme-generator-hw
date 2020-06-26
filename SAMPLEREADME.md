@@ -1,12 +1,10 @@
-// function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+# README Generator
 
   
 
   ## Description 
 
-  ${data.description}
+  a cli app to generate a README from a series of questions
 
 
 
@@ -28,23 +26,23 @@ function generateMarkdown(data) {
 
   ## Installation
 
-  To install the npm packages and their dependencies, run ${data.dependencies}
+  To install the npm packages and their dependencies, run npm i
 
 
 
   ## Usage
 
-  ${data.repo}
+  clone repo from github into a local file
 
 
 
   ## License 
 
-  License: ${data.license}
+  License: MIT
 
-  [![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-yellow.svg)](https://opensource.org/licenses/${data.license})
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  Copyright 2020 ${data.contributerName}
+  Copyright 2020 Danielle Byrne
 
   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
   
@@ -56,22 +54,16 @@ function generateMarkdown(data) {
 
   ## Contributing
 
-  ${data.contributions}
+  no contributions necessary at this time 
 
 
 
   ## Tests
 
-  Tests can be run using ${data.tests}
+  Tests can be run using npm test
 
 
 
   ## Questions
   
-  If you have any questions, please contact me at github.com/${data.username} or email me at ${data.emailAddress}.
-`;
-}
-
-module.exports = {
-  generateMarkdown: generateMarkdown,
-};
+  If you have any questions, please contact me at github.com/daniellebyrne or email me at daniellebyrne421@gmail.com.
