@@ -66,7 +66,7 @@ function init() {
                 "BSD 3",
                 "None"
             ],
-            default: "MIT"
+            default: "MIT",
             // badge link https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
             // licences https://www.synopsys.com/blogs/software-security/top-open-source-licenses/
         },
@@ -107,17 +107,3 @@ function init() {
 
 // function call to initialize program
 init();
-
-
-// {
-    // message: "Prompt",
-    // type: "list",
-    // name: "license",
-    // // badges added from https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
-    // // choices chosen from top 5 of this list: https://www.synopsys.com/blogs/software-security/top-open-source-licenses/
-    // choices: [
-    //   {
-    //     name: "license name",
-    //     value: "badge link",
-    //   },
-    //   ];
